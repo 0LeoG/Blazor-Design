@@ -21,12 +21,10 @@ jobs:
         run: dotnet publish -c Release
         
 
-      - name: GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v1.5.1
+      - name: Commit wwwroot to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          target_branch: gh-pages
-          build_dir: ${{ env.PUBLISH_DIR }}
-        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: release/wwwroot
 
