@@ -1,6 +1,4 @@
 name: Deploy to GitHub Pages
-env:
-  PUBLISH_DIR: bin/Debug/net5.0/wwwroot
 
 # Run workflow on every push to the master branch
 on:
