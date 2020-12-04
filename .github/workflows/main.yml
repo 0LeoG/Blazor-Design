@@ -25,7 +25,7 @@ jobs:
       - name: Rewrite base href
         uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
         with:
-          html_path: index.html
+          html_path: /index.html
           base_href: /blazor-design/
         
       # copy index.html to 404.html to serve the same file when a file is not found
