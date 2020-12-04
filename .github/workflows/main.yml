@@ -10,15 +10,23 @@ jobs:
     steps:   
       # uses GitHub's checkout action to checkout code form the master branch
       - uses: actions/checkout@v2
-      # sets up .NET Core SDK 5.0
-      - name: Setup .NET Core SDK
-        uses: actions/setup-dotnet@v1
+      
+        
       # publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
-        run: dotnet publish --configuration Release --output build
-      - name: Commit wwwroot to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        run: dotnet publish -c Release
+        
+      - name: Rewrite base href
+        uses: SteveSandersonMS/ghaction-rewrite-base-href@v1
         with:
+          html_path: ${{ env.PUBLISH_DIR }}/index.html
+          base_href: /LeoGResume/
+        
+      - name: GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v1.5.1
+        with:
+          target_branch: gh-pages
+          build_dir: ${{ env.PUBLISH_DIR }}
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: release/wwwroot
