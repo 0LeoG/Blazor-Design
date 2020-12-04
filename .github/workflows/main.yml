@@ -1,5 +1,6 @@
 name: Deploy to GitHub Pages
-
+env:
+  PUBLISH_DIR: bin/Release/netstandard2.1/publish/wwwroot
 # Run workflow on every push to the master branch
 on:
   push:
