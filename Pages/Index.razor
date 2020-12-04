@@ -1,7 +1,70 @@
 ﻿@page "/"
+@using BlazorTypewriter
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+<div class="aboutMee">
+    <div class="aboutSection">
+        <div class="namePosition">
+            <span class="name">@Name</span>
+            <br>
+            <span class="blinker">|</span>
+            <span class="occupation">
+                <Typewriter Builder="@profession"></Typewriter>
+            </span>
+        </div>
+    </div>
+    <div class="aboutSection">
+        <div class="flexAbout card">
+            <div class="card-body">
+                <h5 style="color: #f9f9f9;" class="card-title">Hello!</h5>
+                <p style="color: #f9f9f9;">
+                    I'm Leonardo Garcia. I have been working in the Software Engineering field
+                    professionally since 2016. My main focus is building web applications with
+                    .NET Core. I lean more to writing backend systems, although I am working on
+                    a Front End design portfolio. I enjoy building robust APIs that businesses
+                    can leverage to feed data to front end users.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+                    If you would like to get to know more about me reach out!
+                </p>
+                <div class="links">
+                    <button type="button" class="btn btn-lg" onclick="window.location.href='https://github.com/0LeoG'">
+                        <i class="fab fa-github-alt" pr-1></i>
+                        <span>GitHub</span>
+                    </button>
+                    <button type="button" class="btn btn-lg"
+                        onclick="window.location.href='https://www.linkedin.com/in/leogar/'">
+                        <i class="fab fa-linkedin" pr-1></i>
+                        <span>LinkedIn</span>
+                    </button>
+                    <button type="button" class="btn btn-lg">
+                        <a href="mailto:leonardog2395@gmail.com">
+                            <i class="fas fa-envelope-open" pr-1></i>
+                            <span>Email</span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@code{
+    private string Name = "Leonardo Garcia";
+
+    TypewriterBuilder profession = new TypewriterBuilder(defaultCharacterPause: 6)
+        .TypeString("Software Engineer", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString("C#", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString("JavaScript", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString(".Net Core", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .Pause(500)
+        .Loop();
+}

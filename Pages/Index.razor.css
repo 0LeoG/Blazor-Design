@@ -1,0 +1,102 @@
+.aboutMee {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .aboutMee {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body {
+    background-color: #010048;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }  
+
+  .links button{
+    width: 30%;
+  }
+
+  .links button span{
+    font-size: .8rem;
+  }
+}
+
+span.name {
+  font-size: 2rem;
+  color: white;
+}
+
+span.blinker {
+  animation: blinking 0.5s infinite;
+  font-size: 2rem;
+  color: white;
+}
+
+@keyframes blinking {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  49% {
+    color: rgb(255, 255, 255);
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+
+.namePosition {
+  align-self: center;
+}
+
+.occupation {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.aboutSection {
+  display: flex;
+}
+
+.flexAbout {
+  display: flex;
+  align-self: center;
+}
+
+.flexAbout.card {
+  background-color: #010048;
+  width: 50rem;
+  height: 50%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background-color: #090088;
+}
+
+button span,
+button i {
+  color: whitesmoke;
+}
