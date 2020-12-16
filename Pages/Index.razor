@@ -9,13 +9,8 @@
             <span class="name">@Name</span>
             <br>
             <span class="occupation">
-                <Typewriter Builder="@profession" />
-                <br>
-                <Typewriter Builder="@profession1" />
-                <br>
-                <Typewriter Builder="@profession2" />
-                <br>
-                <Typewriter Builder="@profession3" />
+                                <Typewriter Builder="@profession"></Typewriter>
+
 
 
             </span>
@@ -60,14 +55,19 @@
 @code{
     private string Name = "Leonardo Garcia";
 
-    TypewriterBuilder profession = new TypewriterBuilder(defaultCharacterPause: 6)
-        .TypeString("Software Engineer", 100);
-
-    TypewriterBuilder profession1 = new TypewriterBuilder(defaultCharacterPause: 6)
-        .TypeString("JavaScript", 100);
-    TypewriterBuilder profession2 = new TypewriterBuilder(defaultCharacterPause: 6)
-        .TypeString(".Net Core", 100);
-
-    TypewriterBuilder profession3 = new TypewriterBuilder(defaultCharacterPause: 6)
-        .TypeString("C#", 100);
+   TypewriterBuilder profession = new TypewriterBuilder(defaultCharacterPause: 6)
+        .TypeString("Software Engineer", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString("C#", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString("JavaScript", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .TypeString(".Net Core", 100)
+        .Pause(1000)
+        .DeleteAll(30)
+        .Pause(500)
+        .Loop();
 }
