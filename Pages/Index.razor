@@ -5,11 +5,19 @@
 <div class="aboutMee">
     <div class="aboutSection">
         <div class="namePosition">
+            <span class="blinker">|</span>
             <span class="name">@Name</span>
             <br>
-            <span class="blinker">|</span>
             <span class="occupation">
-                <Typewriter Builder="@profession"></Typewriter>
+                <Typewriter Builder="@profession" />
+                <br>
+                <Typewriter Builder="@profession1" />
+                <br>
+                <Typewriter Builder="@profession2" />
+                <br>
+                <Typewriter Builder="@profession3" />
+
+
             </span>
         </div>
     </div>
@@ -53,18 +61,13 @@
     private string Name = "Leonardo Garcia";
 
     TypewriterBuilder profession = new TypewriterBuilder(defaultCharacterPause: 6)
-        .TypeString("Software Engineer", 100)
-        .Pause(1000)
-        .DeleteAll(30)
-        .TypeString("C#", 100)
-        .Pause(1000)
-        .DeleteAll(30)
-        .TypeString("JavaScript", 100)
-        .Pause(1000)
-        .DeleteAll(30)
-        .TypeString(".Net Core", 100)
-        .Pause(1000)
-        .DeleteAll(30)
-        .Pause(500)
-        .Loop();
+        .TypeString("Software Engineer", 100);
+
+    TypewriterBuilder profession1 = new TypewriterBuilder(defaultCharacterPause: 6)
+        .TypeString("JavaScript", 100);
+    TypewriterBuilder profession2 = new TypewriterBuilder(defaultCharacterPause: 6)
+        .TypeString(".Net Core", 100);
+
+    TypewriterBuilder profession3 = new TypewriterBuilder(defaultCharacterPause: 6)
+        .TypeString("C#", 100);
 }
