@@ -9,9 +9,19 @@
     height: 100%;
 }
 
+.centered{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: -webkit-translate(-50%, -50%);
+    transform: -moz-translate(-50%, -50%);
+    transform: -ms-translate(-50%, -50%);
+}
+
 html, body {
     font-family: 'Hasklig-Bold';
-    background-color:#03002e;
+    background-color:#9cacbf;
     height: 100%;
 }
 
