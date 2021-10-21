@@ -1,0 +1,134 @@
+/* /Pages/Index.razor.rz.scp.css */
+.aboutMee[b-jbwd6l3w2o] {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .aboutMee[b-jbwd6l3w2o] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-body[b-jbwd6l3w2o] {
+    background-color: #012e67;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .links[b-jbwd6l3w2o] {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }  
+
+  .links button[b-jbwd6l3w2o]{
+    width: 30%;
+  }
+
+  .links button span[b-jbwd6l3w2o]{
+    font-size: .8rem;
+  }
+}
+
+span.name[b-jbwd6l3w2o] {
+  font-size: 2rem;
+  color: white;
+}
+
+span.blinker[b-jbwd6l3w2o] {
+  animation: blinking-b-jbwd6l3w2o 0.5s infinite;
+  font-size: 2rem;
+  color: white;
+}
+
+@keyframes blinking-b-jbwd6l3w2o {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  49% {
+    color: rgb(255, 255, 255);
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: rgb(255, 255, 255);
+  }
+}
+
+.namePosition[b-jbwd6l3w2o] {
+  align-self: center;
+}
+
+.occupation[b-jbwd6l3w2o] {
+  font-size: 1.5rem;
+  color: whitesmoke;
+}
+
+.aboutSection[b-jbwd6l3w2o] {
+  display: flex;
+}
+
+.flexAbout[b-jbwd6l3w2o] {
+  display: flex;
+  align-self: center;
+}
+
+.flexAbout.card[b-jbwd6l3w2o] {
+  background-color: #2b6684;
+  width: 50rem;
+  height: 50%;
+}
+
+.card-body[b-jbwd6l3w2o] {
+  display: flex;
+  flex-direction: column;
+}
+
+button[b-jbwd6l3w2o] {
+  background-color: #032e42;
+}
+
+button span[b-jbwd6l3w2o],
+button i[b-jbwd6l3w2o] {
+  color: whitesmoke;
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.page[b-mu7na5g68v] {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main[b-mu7na5g68v] {
+  flex: 1;
+}
+
+.top-row[b-mu7na5g68v] {
+  background-color: #000000;
+  border-bottom: 1px solid #d6d5d5;
+  justify-content: flex-end;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.top-row[b-mu7na5g68v]  a,
+.top-row .btn-link[b-mu7na5g68v] {
+  white-space: nowrap;
+  margin-left: 1.5rem;
+}
+
+.top-row a:first-child[b-mu7na5g68v] {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
